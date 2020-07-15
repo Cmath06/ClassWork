@@ -1,0 +1,139 @@
+/*
+Assignment 2 Partners
+Jace Anderson
+Casey Mathisen
+
+
+We used the ubuntu terminal on windows to run our cfile. We used the gcc compilier to compile the code. 
+
+The command is: 
+
+
+gcc -pthread a2.c
+
+We then used this command to run the file and show the output for the reading and writing of a file. 
+
+./a.out
+
+
+To run on your end, please load the directory in which our file is located and run the above commands. 
+
+
+
+
+*/
+
+
+
+
+
+#include <stdio.h> 
+#include <pthread.h> 
+#include <stdlib.h>
+
+
+pthread_rwlock_t rwlock;
+
+
+
+void * readfile_1(void *temp) {
+	char *abc;
+	char *string;
+	FILE *file;
+	
+	sleep(3);
+	pthread_rwlock_rdlock(&rwlock);
+	printf("\n1 File opening for reading\n");
+	file=fopen("temp","r");
+	string=(char *)malloc(10*sizeof(char));
+	fscanf(file,"%s",string);
+	printf("\nMessage from file is %s \n",string);
+	sleep(3);
+
+	fclose(file);
+	printf("\nUnlocking file for user\n");
+	pthread_rwlock_unlock(&rwlock);
+	return abc;
+}
+
+
+
+void * readfile_2(void *temp) {
+	char *abc;
+	char *string;
+	FILE *file;
+	
+	sleep(3);
+	pthread_rwlock_rdlock(&rwlock);
+	printf("\n2 Opening file for reading\n");
+	file=fopen("temp","r");
+	string=(char *)malloc(10*sizeof(char));
+	fscanf(file,"%s",string);
+	printf("\nThe message for the file is %s \n",string);
+
+	fclose(file);
+
+	pthread_rwlock_rdlock(&rwlock);
+
+	return abc;
+}
+
+void * writefile(void *temp) {
+	char *abc;
+	char *string;
+	FILE *file;
+	
+	abc=pthread_rwlock_wrlock(&rwlock);
+	printf("\nFile is locked \n");
+	string=(char *)malloc(10*sizeof(char));
+	file=fopen("temp","w");
+	scanf("%s",string);
+	fprintf(file,"%s",string);
+	fclose(file);
+	pthread_rwlock_unlock(&rwlock);
+	printf("\nFile is unlocked, file is readable \n");
+	return abc;
+}
+
+
+
+void * writefile2(void *temp) {
+	char *abc;
+	char *string;
+	FILE *file;
+	
+	sleep(3);
+	abc=pthread_rwlock_wrlock(&rwlock);
+	printf("\nFile locked, please enter the password \n");
+	string=(char *)malloc(10*sizeof(char));
+	file=fopen("temp","a");
+	scanf("%s",string);
+	fprintf(file,"%s",string);
+	fclose(file);
+	pthread_rwlock_unlock(&rwlock);
+	printf("\nUnlocked, you can now read the file \n");
+	return abc;
+}
+
+main() {
+
+	pthread_t thread_id,thread_id1,thread_id3,thread_id4;
+	pthread_attr_t attr;
+	int abc;
+	void *res;
+	pthread_rwlock_init(&rwlock,NULL);
+	abc=pthread_create(&thread_id,NULL,&writefile,NULL);
+	abc=pthread_create(&thread_id1,NULL,&readfile_1,NULL);
+
+	abc=pthread_create(&thread_id3,NULL,&readfile_2,NULL);
+
+	abc=pthread_create(&thread_id4,NULL,&writefile2,NULL);
+	printf("\n Thread created");
+	pthread_join(thread_id,&res);
+	pthread_join(thread_id1,&res);
+	pthread_join(thread_id3,&res);
+
+	pthread_join(thread_id4,&res);
+	pthread_rwlock_destroy(&rwlock);
+}
+
