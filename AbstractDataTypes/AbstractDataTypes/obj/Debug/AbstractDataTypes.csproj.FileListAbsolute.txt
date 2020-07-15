@@ -1,0 +1,18 @@
+\\mydocs\home$\k\kbundgaard\visual studio 2012\Projects\AbstractDataTypes\AbstractDataTypes\bin\Debug\AbstractDataTypes.exe.config
+\\mydocs\home$\k\kbundgaard\visual studio 2012\Projects\AbstractDataTypes\AbstractDataTypes\obj\Debug\AbstractDataTypes.csprojResolveAssemblyReference.cache
+\\mydocs\home$\k\kbundgaard\visual studio 2012\Projects\AbstractDataTypes\AbstractDataTypes\bin\Debug\AbstractDataTypes.exe
+\\mydocs\home$\k\kbundgaard\visual studio 2012\Projects\AbstractDataTypes\AbstractDataTypes\bin\Debug\AbstractDataTypes.pdb
+\\mydocs\home$\k\kbundgaard\visual studio 2012\Projects\AbstractDataTypes\AbstractDataTypes\obj\Debug\AbstractDataTypes.exe
+\\mydocs\home$\k\kbundgaard\visual studio 2012\Projects\AbstractDataTypes\AbstractDataTypes\obj\Debug\AbstractDataTypes.pdb
+C:\Users\Blaine\Desktop\AbstractDataTypes\AbstractDataTypes\bin\Debug\AbstractDataTypes.exe.config
+C:\Users\Blaine\Desktop\AbstractDataTypes\AbstractDataTypes\obj\Debug\AbstractDataTypes.exe
+C:\Users\Blaine\Desktop\AbstractDataTypes\AbstractDataTypes\obj\Debug\AbstractDataTypes.pdb
+C:\Users\Blaine\Desktop\AbstractDataTypes\AbstractDataTypes\bin\Debug\AbstractDataTypes.exe
+C:\Users\Blaine\Desktop\AbstractDataTypes\AbstractDataTypes\bin\Debug\AbstractDataTypes.pdb
+C:\Users\Blaine\Desktop\AbstractDataTypes\AbstractDataTypes\obj\Debug\AbstractDataTypes.csprojResolveAssemblyReference.cache
+C:\Users\Casey Mathisen\Documents\Visual Studio 2015\Projects\AbstractDataTypes\AbstractDataTypes\bin\Debug\AbstractDataTypes.exe.config
+C:\Users\Casey Mathisen\Documents\Visual Studio 2015\Projects\AbstractDataTypes\AbstractDataTypes\bin\Debug\AbstractDataTypes.exe
+C:\Users\Casey Mathisen\Documents\Visual Studio 2015\Projects\AbstractDataTypes\AbstractDataTypes\bin\Debug\AbstractDataTypes.pdb
+C:\Users\Casey Mathisen\Documents\Visual Studio 2015\Projects\AbstractDataTypes\AbstractDataTypes\obj\Debug\AbstractDataTypes.csprojResolveAssemblyReference.cache
+C:\Users\Casey Mathisen\Documents\Visual Studio 2015\Projects\AbstractDataTypes\AbstractDataTypes\obj\Debug\AbstractDataTypes.exe
+C:\Users\Casey Mathisen\Documents\Visual Studio 2015\Projects\AbstractDataTypes\AbstractDataTypes\obj\Debug\AbstractDataTypes.pdb
